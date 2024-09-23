@@ -115,6 +115,5 @@ public class Persona {
             result = 0;
         }
         return result;
-
     }
 }
