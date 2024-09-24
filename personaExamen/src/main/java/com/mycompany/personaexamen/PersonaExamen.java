@@ -52,7 +52,28 @@ public class PersonaExamen {
         System.out.println(miPersona3);
         imcStatus = miPersona3.calcularIMC();
         pesoIdeal = pesoIdeal(imcStatus);
-        System.out.println(pesoIdeal);
+        System.out.println(pesoIdeal + "\n");
+        
+        //creando una carro
+        
+        Vehiculo miCarro = new Vehiculo();
+        miCarro.setMarca("Mercedes Benz");
+        miCarro.setModelo("CLE 300 e");
+        miCarro.setAno(2024);
+        
+        System.out.println(miCarro);
+        
+        Itraducible[] miImplementacion = new Itraducible[4];
+        miImplementacion[0] = miPersona1;
+        miImplementacion[1] = miPersona2;
+        miImplementacion[2] = miPersona3;
+        miImplementacion[3] = miCarro;
+        
+        for(Itraducible implementacion : miImplementacion){
+            
+        System.out.println(implementacion.aIngles());
+        }
+        
       
     }
     //creando el metodo  tipo String para devolver el peso ideal

@@ -4,7 +4,7 @@ package paq;
  *
  * @author luisa
  */
-public class Persona {
+public class Persona implements Itraducible{
 
     //atributos
     private String nombre;
@@ -101,7 +101,7 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", Dni=" + Dni + ", sexo=" + sexo + ", peso=" + peso + ", altura=" + altura + '}';
+        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", Dni=" + Dni + ", sexo=" + sexo + ", peso=" + peso + ", altura=" + altura + '}' + "\n";
     }
 
     public int calcularIMC() {
@@ -115,5 +115,9 @@ public class Persona {
             result = 0;
         }
         return result;
+    }
+    @Override
+    public String aIngles(){
+        return "Person{" + "Name =" + nombre + ", Age=" + edad + ", IdNumber =" + Dni + ", Gender =" + sexo + ", Weight=" + peso + ", Height=" + altura + '}' + "\n";
     }
 }

@@ -4,11 +4,11 @@ package paq;
  *
  * @author luisa
  */
-public class Vehiculo {
+public class Vehiculo implements Itraducible {
     //atributos
     private String marca;
     private String modelo;
-    private int año;
+    private int ano;
     
     //constructores
 
@@ -16,10 +16,10 @@ public class Vehiculo {
         
     }
 
-    public Vehiculo(String marca, String modelo, int año) {
+    public Vehiculo(String marca, String modelo, int ano) {
         this.marca = marca;
         this.modelo = modelo;
-        this.año = año;
+        this.ano = ano;
     }
     
     //getters
@@ -31,8 +31,8 @@ public class Vehiculo {
         return modelo;
     }
 
-    public int getAño() {
-        return año;
+    public int getAno() {
+        return ano;
     }
     
     //setters
@@ -45,15 +45,19 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
-    public void setAño(int año) {
-        this.año = año;
+    public void setAno(int ano) {
+        this.ano = ano;
     }
     
     //metodos
 
     @Override
     public String toString() {
-        return "Vehiculo{" + "marca=" + marca + ", modelo=" + modelo + ", a\u00f1o=" + año + '}';
+        return "Vehiculo{" + "marca=" + marca + ", modelo=" + modelo + ", año=" + ano + '}';
+    }
+    @Override
+    public String aIngles() {
+        return "Vehicle{" + "Brand =" + marca + ", Model =" + modelo + ", Year =" + ano + '}';
     }
     
 }
